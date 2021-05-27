@@ -12,5 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = process.env.PORT || config.PORT;
 
+app.use('/', require('./routes/employee'));
+
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
